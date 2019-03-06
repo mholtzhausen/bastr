@@ -19,7 +19,7 @@ $ npm install -g @cthru/bastr
 $ bs COMMAND
 running command...
 $ bs (-v|--version|version)
-@cthru/bastr/0.1.0 darwin-x64 node-v8.12.0
+@cthru/bastr/0.1.1 darwin-x64 node-v8.12.0
 $ bs --help [COMMAND]
 USAGE
   $ bs COMMAND
@@ -45,7 +45,7 @@ USAGE
   $ bs capitalize
 ```
 
-_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/capitalize.js)_
+_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.1/src/commands/capitalize.js)_
 
 ## `bs findItem TERM`
 
@@ -59,7 +59,7 @@ ARGUMENTS
   TERM  The term to search for
 ```
 
-_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/findItem.js)_
+_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.1/src/commands/findItem.js)_
 
 ## `bs getItem [INDEX]`
 
@@ -70,7 +70,7 @@ USAGE
   $ bs getItem [INDEX]
 ```
 
-_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/getItem.js)_
+_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.1/src/commands/getItem.js)_
 
 ## `bs help [COMMAND]`
 
@@ -101,7 +101,7 @@ OPTIONS
   -g, --glue=glue  [default:  ] glue to use on join
 ```
 
-_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/join.js)_
+_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.1/src/commands/join.js)_
 
 ## `bs lineArray`
 
@@ -112,7 +112,7 @@ USAGE
   $ bs lineArray
 ```
 
-_See code: [src/commands/lineArray.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/lineArray.js)_
+_See code: [src/commands/lineArray.js](https://github.com/nemesarial/bastr/blob/v0.1.1/src/commands/lineArray.js)_
 
 ## `bs split DELIMITER`
 
@@ -129,5 +129,5 @@ OPTIONS
   -r, --regex  Delimiter is regex
 ```
 
-_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/split.js)_
+_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.1/src/commands/split.js)_
 <!-- commandsstop -->
