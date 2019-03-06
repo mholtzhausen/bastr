@@ -1,11 +1,12 @@
 {
-  "name": "bastr",
+  "name": "@cthru/bastr",
   "description": "CLI string manipulation utility",
   "version": "0.1.0",
   "author": "Mark Holtzhausen",
   "bin": {
     "bs": "./bin/run"
   },
+  "preferGlobal": true,
   "bugs": "https://github.com/nemesarial/bastr/issues",
   "dependencies": {
     "@oclif/command": "^1.5.11",
