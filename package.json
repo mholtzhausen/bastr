@@ -1,0 +1,52 @@
+{
+  "name": "bastr",
+  "description": "CLI string manipulation utility",
+  "version": "0.1.0",
+  "author": "Mark Holtzhausen",
+  "bin": {
+    "bs": "./bin/run"
+  },
+  "bugs": "https://github.com/nemesarial/bastr/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.11",
+    "@oclif/config": "^1.12.9",
+    "@oclif/plugin-help": "^2.1.6",
+    "get-stdin": "^6.0.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.21.2",
+    "eslint": "^5.13.0",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^8.0.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/nemesarial/bastr",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "bs",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "nemesarial/bastr",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
