@@ -4,9 +4,9 @@ bastr
 CLI string manipulation utility
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/bastr.svg)](https://npmjs.org/package/bastr)
-[![Downloads/week](https://img.shields.io/npm/dw/bastr.svg)](https://npmjs.org/package/bastr)
-[![License](https://img.shields.io/npm/l/bastr.svg)](https://github.com/nemesarial/bastr/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@cthru/bastr.svg)](https://npmjs.org/package/bastr)
+[![Downloads/week](https://img.shields.io/npm/dw/@cthru/bastr.svg)](https://npmjs.org/package/bastr)
+[![License](https://img.shields.io/npm/l/@cthru/bastr.svg)](https://github.com/nemesarial/bastr/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -15,11 +15,11 @@ CLI string manipulation utility
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g bastr
+$ npm install -g @cthru/bastr
 $ bs COMMAND
 running command...
 $ bs (-v|--version|version)
-bastr/0.1.0 darwin-x64 node-v10.14.2
+@cthru/bastr/0.1.0 darwin-x64 node-v8.12.0
 $ bs --help [COMMAND]
 USAGE
   $ bs COMMAND
@@ -28,26 +28,49 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`bs hello`](#bs-hello)
+* [`bs capitalize`](#bs-capitalize)
+* [`bs findItem TERM`](#bs-finditem-term)
+* [`bs getItem [INDEX]`](#bs-getitem-index)
 * [`bs help [COMMAND]`](#bs-help-command)
+* [`bs join`](#bs-join)
+* [`bs lineArray`](#bs-linearray)
+* [`bs split DELIMITER`](#bs-split-delimiter)
 
-## `bs hello`
+## `bs capitalize`
 
-Describe the command here
+Capitalize string or [string]
 
 ```
 USAGE
-  $ bs hello
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
+  $ bs capitalize
 ```
 
-_See code: [src/commands/hello.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/hello.js)_
+_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/capitalize.js)_
+
+## `bs findItem TERM`
+
+Get an Item from an array, or a character from a string
+
+```
+USAGE
+  $ bs findItem TERM
+
+ARGUMENTS
+  TERM  The term to search for
+```
+
+_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/findItem.js)_
+
+## `bs getItem [INDEX]`
+
+Get an Item from an array, or a character from a string
+
+```
+USAGE
+  $ bs getItem [INDEX]
+```
+
+_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/getItem.js)_
 
 ## `bs help [COMMAND]`
 
@@ -65,4 +88,46 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
+
+## `bs join`
+
+Join multiple array elements together
+
+```
+USAGE
+  $ bs join
+
+OPTIONS
+  -g, --glue=glue  [default:  ] glue to use on join
+```
+
+_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/join.js)_
+
+## `bs lineArray`
+
+Split string into array
+
+```
+USAGE
+  $ bs lineArray
+```
+
+_See code: [src/commands/lineArray.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/lineArray.js)_
+
+## `bs split DELIMITER`
+
+Split string into array
+
+```
+USAGE
+  $ bs split DELIMITER
+
+ARGUMENTS
+  DELIMITER  [default:  ] Delimiter to use as split point
+
+OPTIONS
+  -r, --regex  Delimiter is regex
+```
+
+_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.0/src/commands/split.js)_
 <!-- commandsstop -->
