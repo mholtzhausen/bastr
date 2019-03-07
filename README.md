@@ -17,13 +17,13 @@ CLI string manipulation utility
 <!-- usage -->
 ```sh-session
 $ npm install -g @cthru/bastr
-$ bs COMMAND
+$ (someProcess) | bs COMMAND
 running command...
 $ bs (-v|--version|version)
-@cthru/bastr/0.1.4 darwin-x64 node-v10.10.0
+@cthru/bastr/0.1.5 darwin-x64 node-v10.10.0
 $ bs --help [COMMAND]
 USAGE
-  $ bs COMMAND
+  $ (someProcess) | bs COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -43,74 +43,74 @@ $ ps | bs lineArray | bs findItem bash | bs getItem 0 | bs split -r "\s+" | bs g
 ```
 # Commands
 <!-- commands -->
-* [`bs capitalize`](#bs-capitalize)
-* [`bs findItem TERM`](#bs-finditem-term)
-* [`bs getItem [INDEX]`](#bs-getitem-index)
-* [`bs help [COMMAND]`](#bs-help-command)
-* [`bs join [GLUE]`](#bs-join-glue)
-* [`bs replace SEARCHTERM REPLACETERM`](#bs-replace-searchterm-replaceterm)
-* [`bs split DELIMITER`](#bs-split-delimiter)
-* [`bs toArray`](#bs-toarray)
+* [`(someProcess) | bs capitalize`](#bs-capitalize)
+* [`(someProcess) | bs findItem TERM`](#bs-finditem-term)
+* [`(someProcess) | bs getItem [INDEX]`](#bs-getitem-index)
+* [`(someProcess) | bs help [COMMAND]`](#bs-help-command)
+* [`(someProcess) | bs join [GLUE]`](#bs-join-glue)
+* [`(someProcess) | bs replace SEARCHTERM REPLACETERM`](#bs-replace-searchterm-replaceterm)
+* [`(someProcess) | bs split DELIMITER`](#bs-split-delimiter)
+* [`(someProcess) | bs toArray`](#bs-toarray)
 
-## `bs capitalize`
+## `(someProcess) | bs capitalize`
 
 Capitalizes string or [string]
 
 ```
 USAGE
-  $ bs capitalize
+  $ (someProcess) | bs capitalize
 
 OPTIONS
   -a, --all           Target all letters, not just first
   -d, --decapitalize  De-Capitalize instead
 
 ALIASES
-  $ bs cap
+  $ (someProcess) | bs cap
 ```
 
-_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/capitalize.js)_
+_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.5/src/commands/capitalize.js)_
 
-## `bs findItem TERM`
+## `(someProcess) | bs findItem TERM`
 
 Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ bs findItem TERM
+  $ (someProcess) | bs findItem TERM
 
 ARGUMENTS
   TERM  The term to search for
 
 ALIASES
-  $ bs search
-  $ bs filter
-  $ bs find
+  $ (someProcess) | bs search
+  $ (someProcess) | bs filter
+  $ (someProcess) | bs find
 ```
 
-_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/findItem.js)_
+_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.5/src/commands/findItem.js)_
 
-## `bs getItem [INDEX]`
+## `(someProcess) | bs getItem [INDEX]`
 
 Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ bs getItem [INDEX]
+  $ (someProcess) | bs getItem [INDEX]
 
 ALIASES
-  $ bs get
-  $ bs select
+  $ (someProcess) | bs get
+  $ (someProcess) | bs select
 ```
 
-_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/getItem.js)_
+_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.5/src/commands/getItem.js)_
 
-## `bs help [COMMAND]`
+## `(someProcess) | bs help [COMMAND]`
 
 display help for bs
 
 ```
 USAGE
-  $ bs help [COMMAND]
+  $ (someProcess) | bs help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -121,27 +121,27 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
-## `bs join [GLUE]`
+## `(someProcess) | bs join [GLUE]`
 
 Join multiple array elements together
 
 ```
 USAGE
-  $ bs join [GLUE]
+  $ (someProcess) | bs join [GLUE]
 
 ARGUMENTS
   GLUE  [default:  ] Glue to use for join
 ```
 
-_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/join.js)_
+_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.5/src/commands/join.js)_
 
-## `bs replace SEARCHTERM REPLACETERM`
+## `(someProcess) | bs replace SEARCHTERM REPLACETERM`
 
 Replaces Values in strings or arrays
 
 ```
 USAGE
-  $ bs replace SEARCHTERM REPLACETERM
+  $ (someProcess) | bs replace SEARCHTERM REPLACETERM
 
 ARGUMENTS
   SEARCHTERM   The term to search for
@@ -153,15 +153,15 @@ OPTIONS
   -r, --regex          use regular expression in search term
 ```
 
-_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/replace.js)_
+_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.1.5/src/commands/replace.js)_
 
-## `bs split DELIMITER`
+## `(someProcess) | bs split DELIMITER`
 
 Split string into array
 
 ```
 USAGE
-  $ bs split DELIMITER
+  $ (someProcess) | bs split DELIMITER
 
 ARGUMENTS
   DELIMITER  [default:  ] Delimiter to use as split point
@@ -170,21 +170,21 @@ OPTIONS
   -r, --regex  Delimiter is regex
 ```
 
-_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/split.js)_
+_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.5/src/commands/split.js)_
 
-## `bs toArray`
+## `(someProcess) | bs toArray`
 
 Split string into array
 
 ```
 USAGE
-  $ bs toArray
+  $ (someProcess) | bs toArray
 
 ALIASES
-  $ bs lineSplit
-  $ bs line2array
-  $ bs lineArray
+  $ (someProcess) | bs lineSplit
+  $ (someProcess) | bs line2array
+  $ (someProcess) | bs lineArray
 ```
 
-_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/toArray.js)_
+_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.1.5/src/commands/toArray.js)_
 <!-- commandsstop -->
