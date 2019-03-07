@@ -13,6 +13,10 @@ class ScriptsCommand extends Command {
     // let str = await stdIn()
     let out = null
 
+    if(args.scriptName===null){
+      return this.log(`You have to specify one of your scripts to run ( ${Object.keys(Scripts.get()).join(' | ')} )`)
+    }
+
     let script=Scripts.get()[args.scriptName]
 
     let plugin = new Config.Plugin({
@@ -60,7 +64,7 @@ class ScriptsCommand extends Command {
           })
           outCommands.push(outCommand.join(' '))
         });
-        this.log(`\n${args.scriptName} :: ${outCommands.join(' | ')}\n`)
+        return this.log(`\n${args.scriptName} :: ${outCommands.join(' | ')}\n`)
     }
 
     let str=await stdIn()
@@ -93,8 +97,7 @@ ScriptsCommand.args = [
   {
     name: 'scriptName',
     description: 'The script you want to apply',
-    options: Object.keys(Scripts.get()),
-    required: true
+    default: null
   }
   // {
   //	 name: 'file',							 // name of arg to show in help and reference with args[name]
