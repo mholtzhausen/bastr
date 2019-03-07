@@ -40,7 +40,7 @@ $ npm install -g @cthru/bastr
 $ (someProcess) | bs COMMAND
 running command...
 $ bs (-v|--version|version)
-@cthru/bastr/0.2.0 darwin-x64 node-v10.10.0
+@cthru/bastr/0.2.1 darwin-x64 node-v10.10.0
 $ bs --help [COMMAND]
 USAGE
   $ (someProcess) | bs COMMAND
@@ -77,7 +77,7 @@ ALIASES
   $ (someProcess) | bs cap
 ```
 
-_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/capitalize.js)_
+_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/capitalize.js)_
 
 ### `(someProcess) | bs findItem TERM`
 
@@ -96,7 +96,7 @@ ALIASES
   $ (someProcess) | bs find
 ```
 
-_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/findItem.js)_
+_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/findItem.js)_
 
 ### `(someProcess) | bs getItem [INDEX]`
 
@@ -114,7 +114,7 @@ ALIASES
   $ (someProcess) | bs select
 ```
 
-_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/getItem.js)_
+_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/getItem.js)_
 
 ### `(someProcess) | bs help [COMMAND]`
 
@@ -145,7 +145,7 @@ ARGUMENTS
   GLUE  [default:  ] Glue to use for join
 ```
 
-_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/join.js)_
+_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/join.js)_
 
 ### `(someProcess) | bs replace SEARCHTERM REPLACETERM`
 
@@ -165,7 +165,7 @@ OPTIONS
   -r, --regex           use regular expression in search term
 ```
 
-_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/replace.js)_
+_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/replace.js)_
 
 ### `(someProcess) | bs script SCRIPTNAME`
 
@@ -182,7 +182,7 @@ OPTIONS
   -s, --show-cli-equivalent  Show what this script would look like on bash
 ```
 
-_See code: [src/commands/script/index.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/script/index.js)_
+_See code: [src/commands/script/index.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/script/index.js)_
 
 ### `(someProcess) | bs script:add`
 
@@ -193,7 +193,7 @@ USAGE
   $ (someProcess) | bs script:add
 ```
 
-_See code: [src/commands/script/add.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/script/add.js)_
+_See code: [src/commands/script/add.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/script/add.js)_
 
 ### `(someProcess) | bs script:list`
 
@@ -204,7 +204,7 @@ USAGE
   $ (someProcess) | bs script:list
 ```
 
-_See code: [src/commands/script/list.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/script/list.js)_
+_See code: [src/commands/script/list.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/script/list.js)_
 
 ### `(someProcess) | bs split DELIMITER`
 
@@ -221,7 +221,7 @@ OPTIONS
   -r, --regex  Delimiter is regex
 ```
 
-_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/split.js)_
+_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/split.js)_
 
 ### `(someProcess) | bs toArray`
 
@@ -237,5 +237,5 @@ ALIASES
   $ (someProcess) | bs lineArray
 ```
 
-_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/toArray.js)_
+_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.2.1/src/commands/toArray.js)_
 <!-- commandsstop -->
