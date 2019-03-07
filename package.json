@@ -1,7 +1,7 @@
 {
   "name": "@cthru/bastr",
   "description": "CLI string manipulation utility",
-  "version": "0.1.3",
+  "version": "0.1.2",
   "author": "Mark Holtzhausen",
   "bin": {
     "bs": "./bin/run"
@@ -48,6 +48,6 @@
     "posttest": "eslint .",
     "prepack": "oclif-dev manifest && oclif-dev readme && REPLACE=1 node ./scripts/fixDocUsage",
     "test": "echo NO TESTS",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && REPLACE=1 node ./scripts/fixDocUsage && git add README.md"
   }
 }
