@@ -23,7 +23,7 @@ $ bs (-v|--version|version)
 @cthru/bastr/0.1.3 darwin-x64 node-v10.10.0
 $ bs --help [COMMAND]
 USAGE
-  $ bs COMMAND
+  $ (someProcess) | bs COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -58,14 +58,14 @@ Capitalizes string or [string]
 
 ```
 USAGE
-  $ bs capitalize
+  $ (someProcess) | bs capitalize
 
 OPTIONS
   -a, --all           Target all letters, not just first
   -d, --decapitalize  De-Capitalize instead
 
 ALIASES
-  $ bs cap
+  $ (someProcess) | bs cap
 ```
 
 _See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/capitalize.js)_
@@ -76,14 +76,14 @@ Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ bs findItem TERM
+  $ (someProcess) | bs findItem TERM
 
 ARGUMENTS
   TERM  The term to search for
 
 ALIASES
-  $ bs search
-  $ bs filter
+  $ (someProcess) | bs search
+  $ (someProcess) | bs filter
 ```
 
 _See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/findItem.js)_
@@ -94,7 +94,7 @@ Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ bs getItem [INDEX]
+  $ (someProcess) | bs getItem [INDEX]
 ```
 
 _See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/getItem.js)_
@@ -105,7 +105,7 @@ display help for bs
 
 ```
 USAGE
-  $ bs help [COMMAND]
+  $ (someProcess) | bs help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -122,7 +122,7 @@ Join multiple array elements together
 
 ```
 USAGE
-  $ bs join [GLUE]
+  $ (someProcess) | bs join [GLUE]
 
 ARGUMENTS
   GLUE  [default:  ] Glue to use for join
@@ -136,12 +136,12 @@ Split string into array
 
 ```
 USAGE
-  $ bs lineArray
+  $ (someProcess) | bs lineArray
 
 ALIASES
-  $ bs lineSplit
-  $ bs line2array
-  $ bs toArray
+  $ (someProcess) | bs lineSplit
+  $ (someProcess) | bs line2array
+  $ (someProcess) | bs toArray
 ```
 
 _See code: [src/commands/lineArray.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/lineArray.js)_
@@ -152,7 +152,7 @@ Replaces Values in strings or arrays
 
 ```
 USAGE
-  $ bs replace SEARCHTERM REPLACETERM
+  $ (someProcess) | bs replace SEARCHTERM REPLACETERM
 
 ARGUMENTS
   SEARCHTERM   The term to search for
@@ -172,7 +172,7 @@ Split string into array
 
 ```
 USAGE
-  $ bs split DELIMITER
+  $ (someProcess) | bs split DELIMITER
 
 ARGUMENTS
   DELIMITER  [default:  ] Delimiter to use as split point
