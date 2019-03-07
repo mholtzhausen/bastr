@@ -24,5 +24,7 @@ FindItemCommand.args = [
   { name: 'term', required: true, description: 'The term to search for' }
 ]
 
+FindItemCommand.aliases=['search','filter']
+
 FindItemCommand.description = `Get an Item from an array, or a character from a string`
 module.exports = FindItemCommand
