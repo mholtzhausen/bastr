@@ -64,3 +64,4 @@ typings/
 /dist
 /tmp
 /yarn.lock
+/data/*

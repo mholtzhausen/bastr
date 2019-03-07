@@ -1,51 +1,23 @@
 const { flags } = require('@oclif/command')
-const Command = require('../lib/CommandLog')
-const stdIn = require('../lib/stdin')
+const Command = require('../../lib/CommandLog')
+const Scripts = require('../../lib/Scripts')
 
-const stringFunction = (str, args, flags) => {
-  let regexModifier = `${flags.first ? '' : 'g'}${
-    flags['case-sensitive'] ? '' : 'i'
-  }`
-  let searchTerm = flags.regex
-    ? new RegExp(args.searchTerm, regexModifier)
-    : new RegExp(
-        args.searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
-        regexModifier
-      )
-  return str.replace(searchTerm, args.replaceTerm)
-}
 
-const arrayFunction = (array, args, flags) => {
-  return array.map(item => stringFunction(item, args, flags))
-}
-
-class ReplaceCommand extends Command {
+class ScriptsListCommand extends Command {
   async run() {
-    const { flags, args } = this.parse(ReplaceCommand)
-    let str = await stdIn()
-    let out = null
+    const scripts=Scripts.get()
+    const scriptNames=Object.keys(scripts)
+    const { flags, args } = this.parse(ScriptsListCommand)
+    this.log('Scripts')
+    this.log('--------------')
+    scriptNames.forEach(scriptName=>this.log(`  - ${scriptName}`))
+    this.log('--------------')
+    this.log('\n\n')
 
-    if (str.isArray) {
-      out = arrayFunction(str.json, args, flags)
-    } else {
-      out = stringFunction(str.string, args, flags)
-    }
-
-    if (out) this.log(out)
   }
 }
 
-ReplaceCommand.args = [
-  {
-    name: 'searchTerm',
-    required: true,
-    description: 'The term to search for'
-  },
-  {
-    name: 'replaceTerm',
-    required: true,
-    description: 'The term to replace searchTerm with'
-  }
+ScriptsListCommand.args = [
   // {
   //	 name: 'file',							 // name of arg to show in help and reference with args[name]
   //	 required: false,						// make the arg required with `required: true`
@@ -57,21 +29,7 @@ ReplaceCommand.args = [
   // }
 ]
 
-ReplaceCommand.flags = {
-  regex: flags.boolean({
-    char: 'r',
-    description: 'use regular expression in search term'
-  }),
-  first: flags.boolean({
-    char: 'f',
-    description: 'only replace the first occurance',
-    default: false
-  }),
-  'case-sensitive': flags.boolean({
-    char: 'c',
-    description: 'match only case sensitive occurances',
-    default: false
-  })
+ScriptsListCommand.flags = {
   // name: flags.string({
   //	 char: 'n',										// shorter flag version
   //	 description: 'name to print', // help description for flag
@@ -96,6 +54,8 @@ ReplaceCommand.flags = {
   // }),
 }
 
-ReplaceCommand.description = `Replaces Values in strings or arrays`
+ScriptsListCommand.aliases = []
 
-module.exports = ReplaceCommand
+ScriptsListCommand.description = `List your Scripts`
+
+module.exports = ScriptsListCommand

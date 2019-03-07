@@ -11,8 +11,13 @@
   "dependencies": {
     "@oclif/command": "^1.5.11",
     "@oclif/config": "^1.12.9",
+    "@oclif/plugin-autocomplete": "^0.1.0",
     "@oclif/plugin-help": "^2.1.6",
-    "get-stdin": "^6.0.0"
+    "capture-console": "^1.0.1",
+    "fs-extra": "^7.0.1",
+    "get-stdin": "^6.0.0",
+    "inquirer": "^6.2.2",
+    "strip-ansi": "^5.0.0"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.21.2",
@@ -27,7 +32,8 @@
     "/bin",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json",
-    "/src"
+    "/src",
+    "/data"
   ],
   "homepage": "https://github.com/nemesarial/bastr",
   "keywords": [
@@ -36,6 +42,11 @@
   "license": "MIT",
   "main": "src/index.js",
   "oclif": {
+    "topics": {
+      "script": {
+        "description": "Manage your scripts"
+      }
+    },
     "commands": "./src/commands",
     "bin": "bs",
     "plugins": [

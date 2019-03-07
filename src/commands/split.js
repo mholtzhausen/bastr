@@ -1,6 +1,5 @@
 const { flags } = require('@oclif/command')
 const Command = require('../lib/CommandLog')
-
 const stdIn = require('../lib/stdin')
 
 class SplitCommand extends Command {
