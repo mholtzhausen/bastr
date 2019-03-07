@@ -18,7 +18,7 @@ readme = readme.replace(/\* \[`bs /g, '* [`(someProcess) | bs ')
 readme = readme.replace(/\(#bs-/g, '(#someprocess--bs-')
 
 // Fix command documentation headings
-readme = readme.replace(/## `bs /g, '## `(someProcess) | bs ')
+readme = readme.replace(/## `bs /g, '### `(someProcess) | bs ')
 
 
 // ReStore version bs usage
