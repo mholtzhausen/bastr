@@ -40,7 +40,7 @@ $ npm install -g @cthru/bastr
 $ (someProcess) | bs COMMAND
 running command...
 $ bs (-v|--version|version)
-@cthru/bastr/0.1.7 darwin-x64 node-v10.10.0
+@cthru/bastr/0.2.0 darwin-x64 node-v10.10.0
 $ bs --help [COMMAND]
 USAGE
   $ (someProcess) | bs COMMAND
@@ -55,10 +55,13 @@ USAGE
 * [`(someProcess) | bs help [COMMAND]`](#someprocess--bs-help-command)
 * [`(someProcess) | bs join [GLUE]`](#someprocess--bs-join-glue)
 * [`(someProcess) | bs replace SEARCHTERM REPLACETERM`](#someprocess--bs-replace-searchterm-replaceterm)
+* [`(someProcess) | bs script SCRIPTNAME`](#someprocess--bs-script-scriptname)
+* [`(someProcess) | bs script:add`](#someprocess--bs-scriptadd)
+* [`(someProcess) | bs script:list`](#someprocess--bs-scriptlist)
 * [`(someProcess) | bs split DELIMITER`](#someprocess--bs-split-delimiter)
 * [`(someProcess) | bs toArray`](#someprocess--bs-toarray)
 
-## `(someProcess) | bs capitalize`
+### `(someProcess) | bs capitalize`
 
 Capitalizes string or [string]
 
@@ -74,9 +77,9 @@ ALIASES
   $ (someProcess) | bs cap
 ```
 
-_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.7/src/commands/capitalize.js)_
+_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/capitalize.js)_
 
-## `(someProcess) | bs findItem TERM`
+### `(someProcess) | bs findItem TERM`
 
 Get an Item from an array, or a character from a string
 
@@ -93,9 +96,9 @@ ALIASES
   $ (someProcess) | bs find
 ```
 
-_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.7/src/commands/findItem.js)_
+_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/findItem.js)_
 
-## `(someProcess) | bs getItem [INDEX]`
+### `(someProcess) | bs getItem [INDEX]`
 
 Get an Item from an array, or a character from a string
 
@@ -103,14 +106,17 @@ Get an Item from an array, or a character from a string
 USAGE
   $ (someProcess) | bs getItem [INDEX]
 
+ARGUMENTS
+  INDEX  Zero-based index for the array item to select
+
 ALIASES
   $ (someProcess) | bs get
   $ (someProcess) | bs select
 ```
 
-_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.7/src/commands/getItem.js)_
+_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/getItem.js)_
 
-## `(someProcess) | bs help [COMMAND]`
+### `(someProcess) | bs help [COMMAND]`
 
 display help for bs
 
@@ -127,7 +133,7 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
-## `(someProcess) | bs join [GLUE]`
+### `(someProcess) | bs join [GLUE]`
 
 Join multiple array elements together
 
@@ -139,9 +145,9 @@ ARGUMENTS
   GLUE  [default:  ] Glue to use for join
 ```
 
-_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.7/src/commands/join.js)_
+_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/join.js)_
 
-## `(someProcess) | bs replace SEARCHTERM REPLACETERM`
+### `(someProcess) | bs replace SEARCHTERM REPLACETERM`
 
 Replaces Values in strings or arrays
 
@@ -154,14 +160,53 @@ ARGUMENTS
   REPLACETERM  The term to replace searchTerm with
 
 OPTIONS
-  -c, --casesensitive  match only case sensitive occurances
-  -f, --first          only replace the first occurance
-  -r, --regex          use regular expression in search term
+  -c, --case-sensitive  match only case sensitive occurances
+  -f, --first           only replace the first occurance
+  -r, --regex           use regular expression in search term
 ```
 
-_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.1.7/src/commands/replace.js)_
+_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/replace.js)_
 
-## `(someProcess) | bs split DELIMITER`
+### `(someProcess) | bs script SCRIPTNAME`
+
+Use a Script
+
+```
+USAGE
+  $ (someProcess) | bs script SCRIPTNAME
+
+ARGUMENTS
+  SCRIPTNAME  (titlecase|po.shop-app) The script you want to apply
+
+OPTIONS
+  -s, --show-cli-equivalent  Show what this script would look like on bash
+```
+
+_See code: [src/commands/script/index.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/script/index.js)_
+
+### `(someProcess) | bs script:add`
+
+List and use Scripts
+
+```
+USAGE
+  $ (someProcess) | bs script:add
+```
+
+_See code: [src/commands/script/add.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/script/add.js)_
+
+### `(someProcess) | bs script:list`
+
+List your Scripts
+
+```
+USAGE
+  $ (someProcess) | bs script:list
+```
+
+_See code: [src/commands/script/list.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/script/list.js)_
+
+### `(someProcess) | bs split DELIMITER`
 
 Split string into array
 
@@ -176,9 +221,9 @@ OPTIONS
   -r, --regex  Delimiter is regex
 ```
 
-_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.7/src/commands/split.js)_
+_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/split.js)_
 
-## `(someProcess) | bs toArray`
+### `(someProcess) | bs toArray`
 
 Split string into array
 
@@ -192,5 +237,5 @@ ALIASES
   $ (someProcess) | bs lineArray
 ```
 
-_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.1.7/src/commands/toArray.js)_
+_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.2.0/src/commands/toArray.js)_
 <!-- commandsstop -->
