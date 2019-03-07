@@ -14,6 +14,8 @@ class FindItemCommand extends Command {
         return item.indexOf(args.term) >= 0
       })
       this.log(newArr)
+    }else{
+      if(str.string.indexOf(args.term)) this.log(str.string)
     }
   }
 }
