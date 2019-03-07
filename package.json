@@ -17,13 +17,13 @@
     "fs-extra": "^7.0.1",
     "get-stdin": "^6.0.0",
     "inquirer": "^6.2.2",
-    "strip-ansi": "^5.0.0"
+    "strip-ansi": "^5.0.0",
+    "globby": "^8.0.2"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.21.2",
     "eslint": "^5.13.0",
-    "eslint-config-oclif": "^3.1.0",
-    "globby": "^8.0.2"
+    "eslint-config-oclif": "^3.1.0"
   },
   "engines": {
     "node": ">=8.0.0"
