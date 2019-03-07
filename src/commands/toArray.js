@@ -2,7 +2,7 @@ const { flags } = require('@oclif/command')
 const Command = require('../lib/CommandLog')
 const stdIn = require('../lib/stdin')
 
-class LineArrayCommand extends Command {
+class ToArrayCommand extends Command {
   async run() {
     let str = await stdIn()
     if (!str.isArray) {
@@ -11,7 +11,7 @@ class LineArrayCommand extends Command {
   }
 }
 
-LineArrayCommand.aliases = ['lineSplit', 'line2array', 'toArray']
+ToArrayCommand.aliases = ['lineSplit', 'line2array', 'lineArray']
 
-LineArrayCommand.description = `Split string into array`
-module.exports = LineArrayCommand
+ToArrayCommand.description = `Split string into array`
+module.exports = ToArrayCommand
