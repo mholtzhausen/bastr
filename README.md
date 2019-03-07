@@ -17,13 +17,13 @@ CLI string manipulation utility
 <!-- usage -->
 ```sh-session
 $ npm install -g @cthru/bastr
-$ (someProcess) | bs COMMAND
+$ bs COMMAND
 running command...
-$ (someProcess) | bs (-v|--version|version)
+$ bs (-v|--version|version)
 @cthru/bastr/0.1.4 darwin-x64 node-v10.10.0
-$ (someProcess) | bs --help [COMMAND]
+$ bs --help [COMMAND]
 USAGE
-  $ (someProcess) | bs COMMAND
+  $ bs COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -58,14 +58,14 @@ Capitalizes string or [string]
 
 ```
 USAGE
-  $ (someProcess) | bs capitalize
+  $ bs capitalize
 
 OPTIONS
   -a, --all           Target all letters, not just first
   -d, --decapitalize  De-Capitalize instead
 
 ALIASES
-  $ (someProcess) | bs cap
+  $ bs cap
 ```
 
 _See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/capitalize.js)_
@@ -76,15 +76,15 @@ Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ (someProcess) | bs findItem TERM
+  $ bs findItem TERM
 
 ARGUMENTS
   TERM  The term to search for
 
 ALIASES
-  $ (someProcess) | bs search
-  $ (someProcess) | bs filter
-  $ (someProcess) | bs find
+  $ bs search
+  $ bs filter
+  $ bs find
 ```
 
 _See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/findItem.js)_
@@ -95,11 +95,11 @@ Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ (someProcess) | bs getItem [INDEX]
+  $ bs getItem [INDEX]
 
 ALIASES
-  $ (someProcess) | bs get
-  $ (someProcess) | bs select
+  $ bs get
+  $ bs select
 ```
 
 _See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/getItem.js)_
@@ -110,7 +110,7 @@ display help for bs
 
 ```
 USAGE
-  $ (someProcess) | bs help [COMMAND]
+  $ bs help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -127,7 +127,7 @@ Join multiple array elements together
 
 ```
 USAGE
-  $ (someProcess) | bs join [GLUE]
+  $ bs join [GLUE]
 
 ARGUMENTS
   GLUE  [default:  ] Glue to use for join
@@ -141,7 +141,7 @@ Replaces Values in strings or arrays
 
 ```
 USAGE
-  $ (someProcess) | bs replace SEARCHTERM REPLACETERM
+  $ bs replace SEARCHTERM REPLACETERM
 
 ARGUMENTS
   SEARCHTERM   The term to search for
@@ -161,7 +161,7 @@ Split string into array
 
 ```
 USAGE
-  $ (someProcess) | bs split DELIMITER
+  $ bs split DELIMITER
 
 ARGUMENTS
   DELIMITER  [default:  ] Delimiter to use as split point
@@ -178,12 +178,12 @@ Split string into array
 
 ```
 USAGE
-  $ (someProcess) | bs toArray
+  $ bs toArray
 
 ALIASES
-  $ (someProcess) | bs lineSplit
-  $ (someProcess) | bs line2array
-  $ (someProcess) | bs lineArray
+  $ bs lineSplit
+  $ bs line2array
+  $ bs lineArray
 ```
 
 _See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/toArray.js)_
