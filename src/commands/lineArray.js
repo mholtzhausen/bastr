@@ -11,5 +11,7 @@ class LineArrayCommand extends Command {
   }
 }
 
+LineArrayCommand.aliases = ['lineSplit', 'line2array', 'toArray']
+
 LineArrayCommand.description = `Split string into array`
 module.exports = LineArrayCommand
