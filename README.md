@@ -17,11 +17,11 @@ CLI string manipulation utility
 <!-- usage -->
 ```sh-session
 $ npm install -g @cthru/bastr
-$ bs COMMAND
+$ (someProcess) | bs COMMAND
 running command...
-$ bs (-v|--version|version)
-@cthru/bastr/0.1.3 darwin-x64 node-v10.10.0
-$ bs --help [COMMAND]
+$ (someProcess) | bs (-v|--version|version)
+@cthru/bastr/0.1.4 darwin-x64 node-v10.10.0
+$ (someProcess) | bs --help [COMMAND]
 USAGE
   $ (someProcess) | bs COMMAND
 ...
@@ -48,9 +48,9 @@ $ ps | bs lineArray | bs findItem bash | bs getItem 0 | bs split -r "\s+" | bs g
 * [`bs getItem [INDEX]`](#bs-getitem-index)
 * [`bs help [COMMAND]`](#bs-help-command)
 * [`bs join [GLUE]`](#bs-join-glue)
-* [`bs lineArray`](#bs-linearray)
 * [`bs replace SEARCHTERM REPLACETERM`](#bs-replace-searchterm-replaceterm)
 * [`bs split DELIMITER`](#bs-split-delimiter)
+* [`bs toArray`](#bs-toarray)
 
 ## `bs capitalize`
 
@@ -68,7 +68,7 @@ ALIASES
   $ (someProcess) | bs cap
 ```
 
-_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/capitalize.js)_
+_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/capitalize.js)_
 
 ## `bs findItem TERM`
 
@@ -84,9 +84,10 @@ ARGUMENTS
 ALIASES
   $ (someProcess) | bs search
   $ (someProcess) | bs filter
+  $ (someProcess) | bs find
 ```
 
-_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/findItem.js)_
+_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/findItem.js)_
 
 ## `bs getItem [INDEX]`
 
@@ -95,9 +96,13 @@ Get an Item from an array, or a character from a string
 ```
 USAGE
   $ (someProcess) | bs getItem [INDEX]
+
+ALIASES
+  $ (someProcess) | bs get
+  $ (someProcess) | bs select
 ```
 
-_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/getItem.js)_
+_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/getItem.js)_
 
 ## `bs help [COMMAND]`
 
@@ -128,23 +133,7 @@ ARGUMENTS
   GLUE  [default:  ] Glue to use for join
 ```
 
-_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/join.js)_
-
-## `bs lineArray`
-
-Split string into array
-
-```
-USAGE
-  $ (someProcess) | bs lineArray
-
-ALIASES
-  $ (someProcess) | bs lineSplit
-  $ (someProcess) | bs line2array
-  $ (someProcess) | bs toArray
-```
-
-_See code: [src/commands/lineArray.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/lineArray.js)_
+_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/join.js)_
 
 ## `bs replace SEARCHTERM REPLACETERM`
 
@@ -164,7 +153,7 @@ OPTIONS
   -r, --regex          use regular expression in search term
 ```
 
-_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/replace.js)_
+_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/replace.js)_
 
 ## `bs split DELIMITER`
 
@@ -181,5 +170,21 @@ OPTIONS
   -r, --regex  Delimiter is regex
 ```
 
-_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.3/src/commands/split.js)_
+_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/split.js)_
+
+## `bs toArray`
+
+Split string into array
+
+```
+USAGE
+  $ (someProcess) | bs toArray
+
+ALIASES
+  $ (someProcess) | bs lineSplit
+  $ (someProcess) | bs line2array
+  $ (someProcess) | bs lineArray
+```
+
+_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.1.4/src/commands/toArray.js)_
 <!-- commandsstop -->
