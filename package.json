@@ -46,7 +46,7 @@
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint .",
-    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "prepack": "oclif-dev manifest && oclif-dev readme && REPLACE=1 node ./scripts/fixDocUsage",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
   }
