@@ -26,6 +26,20 @@ USAGE
 ...
 ```
 <!-- usagestop -->
+# stdIn
+bastr will only accept `stdIn` for content. Use it to make string modifications
+on the terminal.
+
+Examples:
+
+```sh-session
+$ echo -n "capitalize all words" | bs split " " | bs capitalize | bs join " "
+>>> Capitalize All Words
+```
+```sh-session
+$ ps | bs lineArray | bs findItem bash | bs getItem 0 | bs split -r "\s+" | bs getItem 3
+>>> /usr/local/bin/bash
+```
 # Commands
 <!-- commands -->
 * [`bs capitalize`](#bs-capitalize)
