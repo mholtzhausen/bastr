@@ -8,6 +8,26 @@ CLI string manipulation utility
 [![Downloads/week](https://img.shields.io/npm/dw/@cthru/bastr.svg)](https://npmjs.org/package/@cthru/bastr)
 [![License](https://img.shields.io/npm/l/@cthru/bastr.svg)](https://github.com/nemesarial/bastr/blob/master/package.json)
 
+# Description
+`bastr` takes `stdin` content and provide functions to modify the content. It is
+meant as an alternative to using `sed`, `tr`, `awk` and other utilities for
+simple string and array manipulation.
+
+The unix utilities are probably more performant and more powerful - this utility
+only exists because it is easier and more semantic to use.
+
+## Examples
+
+```sh-session
+$ echo -n "capitalize all words" | bs split " " | bs capitalize | bs join " "
+>>> Capitalize All Words
+```
+```sh-session
+$ ps | bs lineArray | bs findItem bash | bs getItem 0 | bs split -r "\s+" | bs getItem 3
+>>> /usr/local/bin/bash
+```
+
+
 <!-- toc -->
 * [Usage](#usage)
 * [Example Usage](#example-usage)
@@ -27,20 +47,6 @@ USAGE
 ...
 ```
 <!-- usagestop -->
-# Example Usage
-bastr will only accept `stdIn` for content. Use it to make string modifications
-on the terminal.
-
-Examples:
-
-```sh-session
-$ echo -n "capitalize all words" | bs split " " | bs capitalize | bs join " "
->>> Capitalize All Words
-```
-```sh-session
-$ ps | bs lineArray | bs findItem bash | bs getItem 0 | bs split -r "\s+" | bs getItem 3
->>> /usr/local/bin/bash
-```
 # Commands
 <!-- commands -->
 * [`(someProcess) | bs capitalize`](#someprocess--bs-capitalize)
