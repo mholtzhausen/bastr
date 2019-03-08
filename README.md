@@ -48,7 +48,7 @@ $ npm install -g @cthru/bastr
 $ (someProcess) | bs COMMAND
 running command...
 $ bs (-v|--version|version)
-@cthru/bastr/0.3.2 darwin-x64 node-v10.10.0
+@cthru/bastr/0.3.3 darwin-x64 node-v10.10.0
 $ bs --help [COMMAND]
 USAGE
   $ (someProcess) | bs COMMAND
@@ -65,6 +65,7 @@ USAGE
 * [`(someProcess) | bs replace SEARCHTERM REPLACETERM`](#someprocess--bs-replace-searchterm-replaceterm)
 * [`(someProcess) | bs script [SCRIPTNAME]`](#someprocess--bs-script-scriptname)
 * [`bs script:add`](#someprocess--bs-scriptadd)
+* [`bs script:delete SCRIPTNAME`](#someprocess--bs-scriptdelete-scriptname)
 * [`bs script:list`](#someprocess--bs-scriptlist)
 * [`(someProcess) | bs select INDEXES`](#someprocess--bs-select-indexes)
 * [`(someProcess) | bs split DELIMITER`](#someprocess--bs-split-delimiter)
@@ -87,7 +88,7 @@ ALIASES
   $ (someProcess) | bs cap
 ```
 
-_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/capitalize.js)_
+_See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/capitalize.js)_
 
 ### `(someProcess) | bs findItem TERM`
 
@@ -106,7 +107,7 @@ ALIASES
   $ (someProcess) | bs find
 ```
 
-_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/findItem.js)_
+_See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/findItem.js)_
 
 ### `(someProcess) | bs getItem [INDEX]`
 
@@ -123,7 +124,7 @@ ALIASES
   $ (someProcess) | bs get
 ```
 
-_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/getItem.js)_
+_See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/getItem.js)_
 
 ### `(someProcess) | bs help [COMMAND]`
 
@@ -154,7 +155,7 @@ ARGUMENTS
   GLUE  [default:  ] Glue to use for join
 ```
 
-_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/join.js)_
+_See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/join.js)_
 
 ### `(someProcess) | bs replace SEARCHTERM REPLACETERM`
 
@@ -174,7 +175,7 @@ OPTIONS
   -r, --regex           use regular expression in search term
 ```
 
-_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/replace.js)_
+_See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/replace.js)_
 
 ### `(someProcess) | bs script [SCRIPTNAME]`
 
@@ -191,7 +192,7 @@ OPTIONS
   -s, --show-cli-equivalent  Show what this script would look like on bash
 ```
 
-_See code: [src/commands/script/index.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/script/index.js)_
+_See code: [src/commands/script/index.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/script/index.js)_
 
 ### `bs script:add`
 
@@ -202,7 +203,21 @@ USAGE
   $ bs script:add
 ```
 
-_See code: [src/commands/script/add.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/script/add.js)_
+_See code: [src/commands/script/add.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/script/add.js)_
+
+### `bs script:delete SCRIPTNAME`
+
+Delete a named script
+
+```
+USAGE
+  $ bs script:delete SCRIPTNAME
+
+ARGUMENTS
+  SCRIPTNAME  delete the `scriptName` script
+```
+
+_See code: [src/commands/script/delete.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/script/delete.js)_
 
 ### `bs script:list`
 
@@ -213,7 +228,7 @@ USAGE
   $ bs script:list
 ```
 
-_See code: [src/commands/script/list.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/script/list.js)_
+_See code: [src/commands/script/list.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/script/list.js)_
 
 ### `(someProcess) | bs select INDEXES`
 
@@ -227,7 +242,7 @@ ARGUMENTS
   INDEXES  A list of indexes delimited by comma. Eg. '1,2,3' and '-3,5,6-'
 ```
 
-_See code: [src/commands/select.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/select.js)_
+_See code: [src/commands/select.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/select.js)_
 
 ### `(someProcess) | bs split DELIMITER`
 
@@ -244,7 +259,7 @@ OPTIONS
   -r, --regex  Delimiter is regex
 ```
 
-_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/split.js)_
+_See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/split.js)_
 
 ### `(someProcess) | bs toArray`
 
@@ -260,7 +275,7 @@ ALIASES
   $ (someProcess) | bs lineArray
 ```
 
-_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/toArray.js)_
+_See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/toArray.js)_
 
 ### `(someProcess) | bs trim TRIMCHAR`
 
@@ -277,5 +292,5 @@ OPTIONS
   -s, --sides=left|right|both  [default: both] Configure which side(s) to trim
 ```
 
-_See code: [src/commands/trim.js](https://github.com/nemesarial/bastr/blob/v0.3.2/src/commands/trim.js)_
+_See code: [src/commands/trim.js](https://github.com/nemesarial/bastr/blob/v0.3.3/src/commands/trim.js)_
 <!-- commandsstop -->
