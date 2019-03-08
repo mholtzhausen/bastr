@@ -16,6 +16,14 @@ simple string and array manipulation.
 The unix utilities are probably more performant and more powerful - this utility
 only exists because it is easier and more semantic to use.
 
+## Advanced Use: Scripts
+Scripts in `bastr` are sequences of predefined actions. To create a new script,
+use the `bs script:add` command and follow along with the prompts
+
+To list your scripts, use `bs script:list`.
+
+To apply a script, use `(someprocess) | bs script [scriptname]`
+
 ## Examples
 
 ```sh-session
@@ -37,92 +45,92 @@ $ ps | bs lineArray | bs findItem bash | bs getItem 0 | bs split -r "\s+" | bs g
 <!-- usage -->
 ```sh-session
 $ npm install -g @cthru/bastr
-$ (someProcess) | bs COMMAND
+$ bs COMMAND
 running command...
 $ bs (-v|--version|version)
 @cthru/bastr/0.2.4 darwin-x64 node-v10.10.0
 $ bs --help [COMMAND]
 USAGE
-  $ (someProcess) | bs COMMAND
+  $ bs COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`(someProcess) | bs capitalize`](#someprocess--bs-capitalize)
-* [`(someProcess) | bs findItem TERM`](#someprocess--bs-finditem-term)
-* [`(someProcess) | bs getItem [INDEX]`](#someprocess--bs-getitem-index)
-* [`(someProcess) | bs help [COMMAND]`](#someprocess--bs-help-command)
-* [`(someProcess) | bs join [GLUE]`](#someprocess--bs-join-glue)
-* [`(someProcess) | bs replace SEARCHTERM REPLACETERM`](#someprocess--bs-replace-searchterm-replaceterm)
-* [`(someProcess) | bs script [SCRIPTNAME]`](#someprocess--bs-script-scriptname)
-* [`(someProcess) | bs script:add`](#someprocess--bs-scriptadd)
-* [`(someProcess) | bs script:list`](#someprocess--bs-scriptlist)
-* [`(someProcess) | bs split DELIMITER`](#someprocess--bs-split-delimiter)
-* [`(someProcess) | bs toArray`](#someprocess--bs-toarray)
+* [`bs capitalize`](#bs-capitalize)
+* [`bs findItem TERM`](#bs-finditem-term)
+* [`bs getItem [INDEX]`](#bs-getitem-index)
+* [`bs help [COMMAND]`](#bs-help-command)
+* [`bs join [GLUE]`](#bs-join-glue)
+* [`bs replace SEARCHTERM REPLACETERM`](#bs-replace-searchterm-replaceterm)
+* [`bs script [SCRIPTNAME]`](#bs-script-scriptname)
+* [`bs script:add`](#bs-scriptadd)
+* [`bs script:list`](#bs-scriptlist)
+* [`bs split DELIMITER`](#bs-split-delimiter)
+* [`bs toArray`](#bs-toarray)
 
-### `(someProcess) | bs capitalize`
+## `bs capitalize`
 
 Capitalizes string or [string]
 
 ```
 USAGE
-  $ (someProcess) | bs capitalize
+  $ bs capitalize
 
 OPTIONS
   -a, --all           Target all letters, not just first
   -d, --decapitalize  De-Capitalize instead
 
 ALIASES
-  $ (someProcess) | bs cap
+  $ bs cap
 ```
 
 _See code: [src/commands/capitalize.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/capitalize.js)_
 
-### `(someProcess) | bs findItem TERM`
+## `bs findItem TERM`
 
 Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ (someProcess) | bs findItem TERM
+  $ bs findItem TERM
 
 ARGUMENTS
   TERM  The term to search for
 
 ALIASES
-  $ (someProcess) | bs search
-  $ (someProcess) | bs filter
-  $ (someProcess) | bs find
+  $ bs search
+  $ bs filter
+  $ bs find
 ```
 
 _See code: [src/commands/findItem.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/findItem.js)_
 
-### `(someProcess) | bs getItem [INDEX]`
+## `bs getItem [INDEX]`
 
 Get an Item from an array, or a character from a string
 
 ```
 USAGE
-  $ (someProcess) | bs getItem [INDEX]
+  $ bs getItem [INDEX]
 
 ARGUMENTS
   INDEX  Zero-based index for the array item to select
 
 ALIASES
-  $ (someProcess) | bs get
-  $ (someProcess) | bs select
+  $ bs get
+  $ bs select
 ```
 
 _See code: [src/commands/getItem.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/getItem.js)_
 
-### `(someProcess) | bs help [COMMAND]`
+## `bs help [COMMAND]`
 
 display help for bs
 
 ```
 USAGE
-  $ (someProcess) | bs help [COMMAND]
+  $ bs help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -133,13 +141,13 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
-### `(someProcess) | bs join [GLUE]`
+## `bs join [GLUE]`
 
 Join multiple array elements together
 
 ```
 USAGE
-  $ (someProcess) | bs join [GLUE]
+  $ bs join [GLUE]
 
 ARGUMENTS
   GLUE  [default:  ] Glue to use for join
@@ -147,13 +155,13 @@ ARGUMENTS
 
 _See code: [src/commands/join.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/join.js)_
 
-### `(someProcess) | bs replace SEARCHTERM REPLACETERM`
+## `bs replace SEARCHTERM REPLACETERM`
 
 Replaces Values in strings or arrays
 
 ```
 USAGE
-  $ (someProcess) | bs replace SEARCHTERM REPLACETERM
+  $ bs replace SEARCHTERM REPLACETERM
 
 ARGUMENTS
   SEARCHTERM   The term to search for
@@ -167,13 +175,13 @@ OPTIONS
 
 _See code: [src/commands/replace.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/replace.js)_
 
-### `(someProcess) | bs script [SCRIPTNAME]`
+## `bs script [SCRIPTNAME]`
 
 Use a Script
 
 ```
 USAGE
-  $ (someProcess) | bs script [SCRIPTNAME]
+  $ bs script [SCRIPTNAME]
 
 ARGUMENTS
   SCRIPTNAME  The script you want to apply
@@ -184,35 +192,35 @@ OPTIONS
 
 _See code: [src/commands/script/index.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/script/index.js)_
 
-### `(someProcess) | bs script:add`
+## `bs script:add`
 
 List and use Scripts
 
 ```
 USAGE
-  $ (someProcess) | bs script:add
+  $ bs script:add
 ```
 
 _See code: [src/commands/script/add.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/script/add.js)_
 
-### `(someProcess) | bs script:list`
+## `bs script:list`
 
 List your Scripts
 
 ```
 USAGE
-  $ (someProcess) | bs script:list
+  $ bs script:list
 ```
 
 _See code: [src/commands/script/list.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/script/list.js)_
 
-### `(someProcess) | bs split DELIMITER`
+## `bs split DELIMITER`
 
 Split string into array
 
 ```
 USAGE
-  $ (someProcess) | bs split DELIMITER
+  $ bs split DELIMITER
 
 ARGUMENTS
   DELIMITER  [default:  ] Delimiter to use as split point
@@ -223,18 +231,18 @@ OPTIONS
 
 _See code: [src/commands/split.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/split.js)_
 
-### `(someProcess) | bs toArray`
+## `bs toArray`
 
-Split string into array
+Split multiline string into array of lines
 
 ```
 USAGE
-  $ (someProcess) | bs toArray
+  $ bs toArray
 
 ALIASES
-  $ (someProcess) | bs lineSplit
-  $ (someProcess) | bs line2array
-  $ (someProcess) | bs lineArray
+  $ bs lineSplit
+  $ bs line2array
+  $ bs lineArray
 ```
 
 _See code: [src/commands/toArray.js](https://github.com/nemesarial/bastr/blob/v0.2.4/src/commands/toArray.js)_

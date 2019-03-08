@@ -20,6 +20,9 @@ readme = readme.replace(/\(#bs-/g, '(#someprocess--bs-')
 // Fix command documentation headings
 readme = readme.replace(/## `bs /g, '### `(someProcess) | bs ')
 
+// Script exceptions
+readme = readme.replace(/\(someProcess\) \| bs script:/g, 'bs script:')
+
 
 // ReStore version bs usage
 readme = readme.replace(new RegExp(STORE_VERSION,'g'), '$ bs (-v|--version|version)')

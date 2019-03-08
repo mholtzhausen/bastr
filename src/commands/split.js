@@ -27,5 +27,5 @@ SplitCommand.flags = {
   })
 }
 
-SplitCommand.description = `Split string into array`
+SplitCommand.description = `Split a string into an array based on a delimiter`
 module.exports = SplitCommand
