@@ -19,7 +19,7 @@ class GetItemCommand extends Command {
   }
 }
 GetItemCommand.args = [{ name: 'index', description:'Zero-based index for the array item to select', default: 0 }]
-GetItemCommand.aliases = ['get','select']
+GetItemCommand.aliases = ['get']
 
 GetItemCommand.description = `Get an Item from an array, or a character from a string`
 module.exports = GetItemCommand
