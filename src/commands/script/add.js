@@ -179,6 +179,6 @@ ScriptsAddCommand.flags = {
 
 ScriptsAddCommand.aliases = []
 
-ScriptsAddCommand.description = `List and use Scripts`
+ScriptsAddCommand.description = `Add a new Script`
 
 module.exports = ScriptsAddCommand

@@ -142,6 +142,6 @@ ScriptsCommand.flags = {
 
 ScriptsCommand.aliases = []
 
-ScriptsCommand.description = `Use a Script`
+ScriptsCommand.description = `Apply a script to bash output`
 
 module.exports = ScriptsCommand
